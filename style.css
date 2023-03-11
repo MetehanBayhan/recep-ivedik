@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka One', sans-serif;
+}
+
+header {
+    padding: 10px 0px;
+    background-color: #F5F5F5;
+    width: 100%;
+    box-shadow: 5px 0px 11px 2px #D45D01;
+}
+
+.logo {
+    width: 300px;
+}
+
+.container {
+    margin: auto;
+    width: 700px;
+    text-align: center;
+}
+
+.mood-list-div {
+    margin: 30px auto;
+    width: 350px;
+    border: 1px solid #E8E2E2;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: initial;
+    color: #243763;
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #E8E2E2;
+    padding: 10px 20px;
+
+    
+    
+}
+.radio:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.radio:last-child {
+    border-bottom: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+label {
+    width: 100%;
+    font-size: 20px;
+    padding: 3px;
+    
+}
+
+.get-gif {
+    padding: 20px 39px;
+    border: none;
+    border-radius: 5px;
+    color: whitesmoke;
+    background-color: #DF7857;
+    font-size: 24px;
+}
+
+.highlight {
+    accent-color: #DF7857;
+    background-color: #FAAB78;
+    color: white;
+    transition: 0.4s;
+}
+
+input[type = radio] {
+    border: 0px;
+    width: 20px;
+    height: 2em;
+
+}
+
+.meme-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    background-color: #10A19D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 2px solid #CD0404;
+    display: none;
+
+}
+
+.gif {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 350px;
+    width: 300px;
+    box-shadow: 0 0 15px 1px #DF7857;
+
+}
+
+.meme-modal-close-btn {
+    margin-left: auto;
+    margin: 15px 15px auto auto;
+    border: none;
+    padding: 6px 12px;
+    background-color: #CD0404;
+    color: white;
+    border-radius: 2px;
+}
