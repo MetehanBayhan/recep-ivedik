@@ -7,12 +7,10 @@ const memeModalInner = document.getElementById('meme-modal-inner')
 const closeBtn = document.getElementById('meme-modal-close-btn')
 
 moodListDiv.addEventListener('change', highlightCheckedOption)
-
 closeBtn.addEventListener('click', closeGif)
+getGifBtn.addEventListener('click', render)
 
-function closeGif() {
-    memeModal.style.display = 'none'
-}
+
 function highlightCheckedOption(e) {
     const radios = document.getElementsByClassName('radio')
     for (let radio of radios) {
@@ -21,23 +19,9 @@ function highlightCheckedOption(e) {
     document.getElementById(e.target.id).parentElement.classList.add('highlight')
 }
 
-function getMatched() {
-    if(document.querySelector('input[type="radio"]:checked')) {
-        const currentMood = document.querySelector('input[type="radio"]:checked').value
-        const findMood =  gifData.filter(function(mood){
-            return mood.topic.includes(currentMood)
-        })
-        return findMood
-    }
+function closeGif() {
+    memeModal.style.display = 'none'
 }
-
-
-function getGif(){
-    const gifArray = getMatched()
-    return gifArray[0]
-}
-
-getGifBtn.addEventListener('click', render)
 
 function render(){
     const gif = getGif()
@@ -51,13 +35,20 @@ function render(){
     memeModal.style.display = 'flex'
 }
 
+function getGif(){
+    const gifArray = getMatched()
+    return gifArray[0]
+}
 
-function getTopicsFromArray(arr) {
-    let topicList = []
-    for (let object of arr){
-        topicList.push(object.topic[0])
+
+function getMatched() {
+    if(document.querySelector('input[type="radio"]:checked')) {
+        const currentMood = document.querySelector('input[type="radio"]:checked').value
+        const findMood =  gifData.filter(function(mood){
+            return mood.topic.includes(currentMood)
+        })
+        return findMood
     }
-    return topicList
 }
 
 function getMoodRadios(arr) {
@@ -72,6 +63,14 @@ function getMoodRadios(arr) {
     }
     moodListDiv.innerHTML = radios
 
+}
+
+function getTopicsFromArray(arr) {
+    let topicList = []
+    for (let object of arr){
+        topicList.push(object.topic[0])
+    }
+    return topicList
 }
 
 getMoodRadios(gifData)

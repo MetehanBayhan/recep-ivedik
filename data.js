@@ -11,7 +11,7 @@ export const gifData = [
     },
     {
         topic: ["model"],
-        gif: "gifs/q-we.gif",
+        gif: "gifs/nah-ceken-recep.gif",
         alt: "Recep İvedik making pose",
     },
     {

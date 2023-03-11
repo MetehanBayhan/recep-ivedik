@@ -51,11 +51,21 @@ header {
     border-bottom-right-radius: 10px;
 }
 
+
+
+
 label {
     width: 100%;
     font-size: 20px;
     padding: 3px;
     
+}
+
+input[type = radio] {
+    border: 0px;
+    width: 20px;
+    height: 2em;
+
 }
 
 .get-gif {
@@ -74,11 +84,15 @@ label {
     transition: 0.4s;
 }
 
-input[type = radio] {
-    border: 0px;
-    width: 20px;
-    height: 2em;
-
+/*OPENED GIF SECTION */
+.meme-modal-close-btn {
+    margin-left: auto;
+    margin: 15px 15px auto auto;
+    border: none;
+    padding: 6px 12px;
+    background-color: #CD0404;
+    color: white;
+    border-radius: 2px;
 }
 
 .meme-modal {
@@ -110,12 +124,3 @@ input[type = radio] {
 
 }
 
-.meme-modal-close-btn {
-    margin-left: auto;
-    margin: 15px 15px auto auto;
-    border: none;
-    padding: 6px 12px;
-    background-color: #CD0404;
-    color: white;
-    border-radius: 2px;
-}
